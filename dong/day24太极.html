@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{
+				width:300px;
+				height:300px;
+				position:relative;
+				margin: 50px auto;
+				background: -webkit-linear-gradient(left,#000 0px,#000 150px,#fff 150px);
+				box-shadow: 0 0 30px #333333;
+				border-radius: 50%;
+			}
+			#box:before{
+				content: '';
+				width:50%;
+				height:50%;
+				position:absolute;
+				top:0;
+				left:75px;
+				border-radius:50%;
+				background:-webkit-radial-gradient(#fff 0,#fff 25%,#000 25%);				
+			}
+			#box:after{
+				content:'';
+				position:absolute;
+				width:50%;
+				height:50%;
+				top:150px;
+				left:75px;
+				border-radius:50%;
+				background:-webkit-radial-gradient(#000 0,#000 25%,#fff 25%);
+			}
+			@-webkit-keyframes go{
+				100%{transform: rotate(360deg);}
+			}
+			#box{animation: go 5s 1s linear infinite;}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>
